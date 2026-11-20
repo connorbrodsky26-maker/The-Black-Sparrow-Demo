@@ -726,19 +726,22 @@
         text-align: center;
       }
 
+      /* Match live mobile header: centered BS stamp + borderless top-right hamburger */
       .header-inner {
-        grid-template-columns: auto auto;
-        justify-content: space-between;
-        padding: 16px 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 20px 10px;
       }
 
       .brand-logo-link {
-        width: 78px;
-        margin-left: 0;
+        width: 96px;
+        margin: 0 auto;
       }
 
       .brand-logo-img {
-        width: 78px;
+        width: 96px;
       }
 
       .desktop-nav {
@@ -747,46 +750,76 @@
 
       .hamburger-btn {
         display: inline-flex;
+        position: absolute;
+        top: 16px;
+        right: 14px;
+        border: none;
+        width: 38px;
+        height: 38px;
       }
 
       .hero-section {
-        padding: 6px 20px 0;
+        padding: 18px 20px 44px;
+      }
+
+      /* Replicate the tall black gap on the live mobile site when toggled to Current */
+      body.view-current .hero-section {
+        padding-bottom: 210px;
       }
 
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 0;
       }
 
       .hero-copy-col {
-        padding: 10px 8px 4px;
+        padding: 8px 8px 0;
+      }
+
+      .hero-title {
+        font-size: 17px;
+        margin-bottom: 18px;
+      }
+
+      .hero-title br {
+        display: none;
       }
 
       .hero-tagline {
-        max-width: 280px;
+        max-width: 300px;
+        font-size: 13.5px;
+        margin-bottom: 22px;
       }
 
       .hero-age {
-        margin-bottom: 24px;
+        margin-bottom: 26px;
       }
 
-      .btn-existing-menu,
+      /* Hide interior photo on mobile to match live Wix mobile layout */
+      .hero-photo-col {
+        display: none;
+      }
+
+      .btn-existing-menu {
+        min-width: 142px;
+      }
+
       .upgrade-hero-actions {
         width: 100%;
-        max-width: 240px;
+        max-width: 210px;
       }
 
       .site-footer {
-        padding: 46px 20px 96px;
+        padding: 36px 20px 96px;
       }
 
       .footer-grid {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 32px;
       }
 
       .footer-copyright {
-        margin-top: 44px;
+        margin-top: 38px;
       }
 
       .demo-toggle-btn {
@@ -867,7 +900,7 @@
     <main class="hero-section">
       <div class="hero-grid">
         <div class="hero-copy-col">
-          <h1 class="hero-title">THE BLACK<br>SPARROW</h1>
+          <h1 class="hero-title">THE BLACK <br>SPARROW</h1>
           <p class="hero-tagline">
             Providing Lafayette with honest food, good booze, and casual hospitality without making a big deal about it.
           </p>
