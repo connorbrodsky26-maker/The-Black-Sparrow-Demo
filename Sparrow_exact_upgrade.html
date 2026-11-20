@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Black Sparrow | Honest Food, Craft Cocktails &amp; Pub in Lafayette, IN</title>
-  <meta name="description" content="The Black Sparrow in Downtown Lafayette (223 Main St) serves honest scratch food, craft cocktails, and casual 21+ hospitality. Open Mon–Thu 11am–12am, Fri 11am–1am, Sat 4pm–1am. Call (765) 429-0405.">
+  <title>The Black Sparrow | Honest Food, Good Booze &amp; Pub in Lafayette, IN</title>
+  <meta name="description" content="The Black Sparrow in Downtown Lafayette (223 Main St) serves honest food, craft cocktails, and casual 21+ hospitality. Open Mon–Thu 11am–12am, Fri 11am–1am, Sat 4pm–1am. Call (765) 429-0405 or order online.">
   <link rel="canonical" href="https://www.blacksparrowpub.com/">
 
-  <!-- Open Graph / Social Sharing Tags -->
+  <!-- Open Graph Tags -->
   <meta property="og:type" content="restaurant">
   <meta property="og:site_name" content="Black Sparrow Pub">
-  <meta property="og:title" content="The Black Sparrow | Craft Cocktails &amp; Scratch Kitchen in Lafayette, IN">
+  <meta property="og:title" content="The Black Sparrow | Honest Food &amp; Craft Cocktails in Lafayette, IN">
   <meta property="og:description" content="Providing Lafayette with honest food, good booze, and casual hospitality without making a big deal about it. 21+ Only • 223 Main St, Lafayette, IN • (765) 429-0405.">
   <meta property="og:url" content="https://www.blacksparrowpub.com/">
+  <meta property="og:image" content="https://static.wixstatic.com/media/dd8e6c_71384d66c91b49f3b11f649152e34026~mv2.jpg/v1/fill/w_919,h_695,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/dd8e6c_71384d66c91b49f3b11f649152e34026~mv2.jpg">
 
-  <!-- Restaurant JSON-LD Structured Data Schema -->
+  <!-- Restaurant JSON-LD Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -22,11 +23,12 @@
     "name": "The Black Sparrow",
     "alternateName": "Black Sparrow Pub",
     "url": "https://www.blacksparrowpub.com/",
+    "image": "https://static.wixstatic.com/media/dd8e6c_71384d66c91b49f3b11f649152e34026~mv2.jpg/v1/fill/w_919,h_695,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/dd8e6c_71384d66c91b49f3b11f649152e34026~mv2.jpg",
     "telephone": "+1-765-429-0405",
     "priceRange": "$$",
     "servesCuisine": ["American", "Gastropub", "Craft Cocktails"],
-    "acceptsReservations": "https://www.blacksparrowpub.com/reservations",
     "hasMenu": "https://www.blacksparrowpub.com/menu",
+    "acceptsReservations": "https://www.blacksparrowpub.com/reservations",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "223 Main St",
@@ -62,25 +64,23 @@
   }
   </script>
 
-  <!-- Fonts matching Black Sparrow's classic pub serif + clean grotesque pairing -->
+  <!-- Exact Wix Typography: Azeret Mono, Libre Baskerville, and Light Sans (Avenir Light equivalent) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500;600&family=Libre+Baskerville:wght@400;700&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-dark: #11100e;
-      --bg-surface: #191714;
-      --bg-elevated: #221f1a;
-      --accent-yellow: #e5b842;
-      --accent-yellow-hover: #f2ca5c;
-      --text-primary: #f5f1e8;
-      --text-muted: #c2b9a7;
-      --border-subtle: rgba(229, 184, 66, 0.22);
-      --border-hairline: rgba(255, 255, 255, 0.1);
-      --font-display: 'Cinzel', Georgia, serif;
-      --font-serif: 'Playfair Display', Georgia, serif;
-      --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      --bg-black: #000000;
+      --bar-bg: #0c0c0c;
+      --text-white: #ffffff;
+      --text-soft: #d9d9d9;
+      --text-dim: #a6a6a6;
+      --border-line: rgba(255, 255, 255, 0.42);
+      --border-subtle: rgba(255, 255, 255, 0.16);
+      --font-mono: 'Azeret Mono', monospace;
+      --font-serif: 'Libre Baskerville', Georgia, serif;
+      --font-sans: 'Nunito Sans', 'Avenir Next', 'Avenir', Helvetica, Arial, sans-serif;
     }
 
     *, *::before, *::after {
@@ -93,8 +93,8 @@
       min-height: 100%;
       overflow-x: clip;
       scroll-behavior: smooth;
-      background-color: var(--bg-dark);
-      color: var(--text-primary);
+      background-color: var(--bg-black);
+      color: var(--text-white);
       font-family: var(--font-sans);
       -webkit-font-smoothing: antialiased;
     }
@@ -104,204 +104,161 @@
       text-decoration: none;
     }
 
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
     .page-wrapper {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      position: relative;
+      background-color: var(--bg-black);
     }
 
     /* ============================================================
-       UPGRADE #1: STICKY TOP UTILITY BAR
-       Smoothly hidden when toggled to "Current Site"
+       UPGRADE #1: STICKY MONOCHROME UTILITY BAR
+       Smoothly hidden when toggled to "View: Current Site"
     ============================================================ */
     .upgrade-utility-bar {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: #1b1710;
-      border-bottom: 1px solid rgba(229, 184, 66, 0.35);
-      color: var(--text-primary);
-      font-size: 0.78rem;
-      letter-spacing: 0.03em;
-      transition: max-height 0.32s ease, opacity 0.28s ease, padding 0.32s ease, border-width 0.32s ease;
-      max-height: 120px;
+      background-color: var(--bar-bg);
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-soft);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.02em;
+      max-height: 96px;
       opacity: 1;
       overflow: hidden;
+      transition: max-height 0.28s ease, opacity 0.24s ease, border-color 0.28s ease;
     }
 
     body.view-current .upgrade-utility-bar {
       max-height: 0;
       opacity: 0;
-      border-bottom-width: 0;
+      border-bottom-color: transparent;
       pointer-events: none;
     }
 
     .utility-inner {
-      max-width: 1160px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: 9px 16px;
+      padding: 9px 20px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 8px 18px;
+      gap: 8px 20px;
     }
 
-    .utility-item {
+    .utility-group {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      white-space: nowrap;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
     .utility-link {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: color 0.2s ease;
+      color: var(--text-white);
+      transition: opacity 0.18s ease;
+      white-space: nowrap;
     }
 
     .utility-link:hover {
-      color: var(--accent-yellow);
+      opacity: 0.72;
     }
 
     .utility-phone {
-      color: var(--accent-yellow);
-      font-weight: 700;
-      background: rgba(229, 184, 66, 0.12);
-      border: 1px solid rgba(229, 184, 66, 0.38);
-      padding: 4px 10px;
-      border-radius: 999px;
-    }
-
-    .utility-phone:hover {
-      background: var(--accent-yellow);
-      color: #14120e;
-    }
-
-    .utility-hours {
-      color: var(--text-muted);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 3px 9px;
       font-weight: 500;
     }
 
-    .utility-icon {
-      width: 14px;
-      height: 14px;
+    .utility-phone:hover {
+      background: #ffffff;
+      color: #000000;
+      opacity: 1;
+    }
+
+    .utility-hours {
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+
+    .u-icon {
+      width: 12px;
+      height: 12px;
       flex-shrink: 0;
       stroke: currentColor;
       fill: none;
-      stroke-width: 2;
+      stroke-width: 1.8;
       stroke-linecap: round;
       stroke-linejoin: round;
     }
 
     /* ============================================================
-       EXISTING SITE HEADER & NAVIGATION (WIX REPLICATION)
+       EXACT LIVE SITE HEADER (980px WIX GRID)
     ============================================================ */
     .site-header {
-      background: rgba(17, 16, 14, 0.94);
-      border-bottom: 1px solid var(--border-hairline);
-      position: relative;
-      z-index: 90;
+      width: 100%;
+      background-color: var(--bg-black);
     }
 
     .header-inner {
-      max-width: 1160px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: 16px 20px;
-      display: flex;
+      padding: 28px 20px 18px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
       align-items: center;
-      justify-content: space-between;
-      gap: 20px;
     }
 
     .brand-logo-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      flex-shrink: 0;
+      display: inline-block;
+      width: 104px;
+      margin-left: 14px;
     }
 
-    /* Optional: To swap in their exact Wix stamp image, replace the SVG with:
-       <img src="EXACT_WIXSTATIC_URL_FOR_BLASP-STAMP-YELLOW" alt="The Black Sparrow Stamp" class="stamp-img"> */
-    .stamp-svg {
-      width: 62px;
-      height: 62px;
-      display: block;
-      transition: transform 0.25s ease;
-    }
-
-    .brand-logo-link:hover .stamp-svg {
-      transform: rotate(-4deg) scale(1.03);
-    }
-
-    .brand-wordmark {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
-
-    .brand-wordmark span:first-child {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      color: var(--accent-yellow);
-    }
-
-    .brand-wordmark span:last-child {
-      font-size: 0.68rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-top: 3px;
+    .brand-logo-img {
+      width: 104px;
+      height: auto;
+      object-fit: contain;
     }
 
     .desktop-nav {
       display: flex;
       align-items: center;
-      gap: 32px;
+      justify-content: center;
+      gap: 34px;
+      padding-right: 70px;
     }
 
     .desktop-nav a {
-      font-size: 0.84rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-primary);
-      padding: 6px 2px;
-      position: relative;
-      transition: color 0.2s ease;
-    }
-
-    .desktop-nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 1.5px;
-      background: var(--accent-yellow);
-      transition: width 0.22s ease;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text-white);
+      letter-spacing: 0.01em;
+      transition: opacity 0.18s ease;
     }
 
     .desktop-nav a:hover {
-      color: var(--accent-yellow);
-    }
-
-    .desktop-nav a:hover::after {
-      width: 100%;
+      opacity: 0.68;
     }
 
     .hamburger-btn {
       display: none;
       background: transparent;
-      border: 1px solid var(--border-subtle);
-      border-radius: 6px;
-      color: var(--text-primary);
-      width: 42px;
-      height: 42px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: var(--text-white);
+      width: 40px;
+      height: 40px;
       align-items: center;
       justify-content: center;
       cursor: pointer;
@@ -311,11 +268,11 @@
     .mobile-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.72);
+      background: rgba(0, 0, 0, 0.78);
       z-index: 140;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.24s ease;
+      transition: opacity 0.22s ease;
     }
 
     .mobile-backdrop.is-open {
@@ -327,17 +284,16 @@
       position: fixed;
       top: 0;
       right: 0;
-      width: min(300px, 82vw);
+      width: min(290px, 82vw);
       height: 100%;
-      background: #161411;
+      background: #080808;
       border-left: 1px solid var(--border-subtle);
       z-index: 150;
-      padding: 24px 22px 110px;
+      padding: 24px 22px 104px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
       transform: translateX(100%);
-      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: transform 0.26s ease;
       overflow-y: auto;
     }
 
@@ -351,183 +307,158 @@
       justify-content: space-between;
       padding-bottom: 16px;
       margin-bottom: 8px;
-      border-bottom: 1px solid var(--border-hairline);
+      border-bottom: 1px solid var(--border-subtle);
     }
 
-    .drawer-title {
-      font-family: var(--font-display);
-      font-size: 0.9rem;
-      letter-spacing: 0.14em;
-      color: var(--accent-yellow);
+    .drawer-label {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-white);
     }
 
     .drawer-close {
       background: transparent;
-      border: 1px solid var(--border-hairline);
-      color: var(--text-primary);
-      width: 36px;
-      height: 36px;
-      border-radius: 6px;
-      font-size: 1.2rem;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-white);
+      width: 34px;
+      height: 34px;
+      font-size: 20px;
+      line-height: 1;
       cursor: pointer;
     }
 
     .mobile-nav-link {
-      display: block;
-      padding: 13px 4px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--text-white);
+      padding: 14px 2px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .mobile-nav-link:hover {
-      color: var(--accent-yellow);
-    }
-
-    .drawer-contact-upgrade {
-      margin-top: 18px;
-      padding: 14px;
-      background: rgba(229, 184, 66, 0.08);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
+    .drawer-upgrade-contact {
+      margin-top: 20px;
       display: flex;
       flex-direction: column;
       gap: 10px;
-      transition: opacity 0.25s ease, max-height 0.25s ease;
     }
 
-    body.view-current .drawer-contact-upgrade {
+    body.view-current .drawer-upgrade-contact {
       display: none;
     }
 
     .drawer-call-btn {
       display: block;
       text-align: center;
-      background: var(--accent-yellow);
-      color: #14120e;
-      font-weight: 700;
-      font-size: 0.85rem;
-      padding: 10px 12px;
-      border-radius: 6px;
+      padding: 11px 12px;
+      background: #ffffff;
+      color: #000000;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .drawer-map-link {
+      text-align: center;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      color: var(--text-dim);
+      text-decoration: underline;
     }
 
     /* ============================================================
-       HERO SECTION (MATCHING BLASP BACKGROUND & EXACT LIVE COPY)
+       EXACT LIVE SPLIT HERO (LEFT COPY STACK + RIGHT INTERIOR PHOTO)
     ============================================================ */
     .hero-section {
-      position: relative;
-      min-height: 76vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 72px 20px 80px;
-      /* Optional: Replace background-image URL below with the exact static.wixstatic.com/media/... URL for BLASP BACKGROUND.jpg */
-      background:
-        radial-gradient(circle at 50% 24%, rgba(229, 184, 66, 0.16) 0%, rgba(17, 16, 14, 0.72) 56%, rgba(12, 11, 10, 0.95) 100%),
-        repeating-linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.015) 0px,
-          rgba(255, 255, 255, 0.015) 1px,
-          transparent 1px,
-          transparent 48px
-        ),
-        linear-gradient(160deg, #271e15 0%, #161310 52%, #0e0d0b 100%);
-      border-bottom: 1px solid var(--border-hairline);
+      width: 100%;
+      padding: 12px 20px 0;
     }
 
-    .hero-content {
-      max-width: 760px;
+    .hero-grid {
+      max-width: 980px;
       margin: 0 auto;
-      position: relative;
-      z-index: 2;
+      display: grid;
+      grid-template-columns: 316px 1fr;
+      gap: 18px;
+      align-items: center;
     }
 
-    .hero-emblem-mobile {
-      margin: 0 auto 20px;
-      width: 74px;
-      height: 74px;
-      display: block;
+    .hero-copy-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 16px 18px 16px 64px;
     }
 
     .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.25rem, 6.2vw, 4.1rem);
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      line-height: 1.12;
-      color: var(--text-primary);
-      text-shadow: 0 6px 26px rgba(0, 0, 0, 0.65);
-    }
-
-    .hero-divider {
-      width: 76px;
-      height: 2px;
-      background: var(--accent-yellow);
-      margin: 22px auto;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: 0.03em;
+      color: var(--text-white);
+      margin-bottom: 22px;
+      text-transform: uppercase;
     }
 
     .hero-tagline {
-      font-family: var(--font-serif);
-      font-size: clamp(1.08rem, 2.5vw, 1.38rem);
-      line-height: 1.6;
-      color: #e9e2d4;
-      max-width: 640px;
-      margin: 0 auto 18px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--text-white);
+      max-width: 224px;
+      margin-bottom: 24px;
+    }
+
+    .hero-age {
+      font-family: var(--font-mono);
+      font-size: 13px;
       font-weight: 400;
+      color: var(--text-white);
+      margin-bottom: 34px;
     }
 
-    .hero-age-note {
-      display: inline-block;
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent-yellow);
-      margin-bottom: 30px;
-    }
-
-    /* Original Wix CTA Button (Always Visible) */
-    .existing-cta-wrap {
-      margin-bottom: 16px;
-    }
-
+    /* Exact Original Button (Preserved Untouched) */
     .btn-existing-menu {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 14px 34px;
-      border: 1.5px solid var(--text-primary);
-      background: rgba(17, 16, 14, 0.55);
-      color: var(--text-primary);
-      font-size: 0.86rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease;
+      min-width: 124px;
+      padding: 10px 18px;
+      background-color: #000000;
+      border: 1px solid var(--border-line);
+      color: var(--text-white);
+      font-family: var(--font-sans);
+      font-size: 12.5px;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     }
 
     .btn-existing-menu:hover {
-      background: var(--text-primary);
-      color: #11100e;
+      background-color: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
     }
 
     /* ============================================================
-       UPGRADE #2: ABOVE-THE-FOLD CONVERSION ACTION BUTTONS
-       Smoothly hidden when toggled to "Current Site"
+       UPGRADE #2: BRAND-MATCHED DIRECT ACTION BUTTONS
+       Strictly monochrome, sharp corners, smoothly hidden in Current View
     ============================================================ */
     .upgrade-hero-actions {
+      width: 100%;
+      max-width: 196px;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 14px;
-      transition: max-height 0.32s ease, opacity 0.28s ease, margin 0.32s ease;
-      max-height: 220px;
+      flex-direction: column;
+      gap: 9px;
+      margin-top: 12px;
+      max-height: 140px;
       opacity: 1;
       overflow: hidden;
+      transition: max-height 0.28s ease, opacity 0.24s ease, margin-top 0.28s ease;
     }
 
     body.view-current .upgrade-hero-actions {
@@ -537,282 +468,199 @@
       pointer-events: none;
     }
 
-    .btn-upgrade-action {
-      display: inline-flex;
-      flex-direction: column;
+    .btn-upgrade {
+      display: flex;
       align-items: center;
       justify-content: center;
-      min-width: 210px;
-      padding: 12px 22px;
-      border-radius: 4px;
-      transition: transform 0.18s ease, background 0.2s ease, border-color 0.2s ease;
+      gap: 6px;
+      width: 100%;
+      padding: 9px 12px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.03em;
+      transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
     }
 
-    .btn-upgrade-action:hover {
-      transform: translateY(-1px);
-    }
-
-    .btn-upgrade-primary {
-      background: var(--accent-yellow);
-      color: #14120e;
-      border: 1.5px solid var(--accent-yellow);
-    }
-
-    .btn-upgrade-primary:hover {
-      background: var(--accent-yellow-hover);
-      border-color: var(--accent-yellow-hover);
-    }
-
-    .btn-upgrade-secondary {
-      background: rgba(229, 184, 66, 0.1);
-      color: var(--accent-yellow);
-      border: 1.5px solid rgba(229, 184, 66, 0.65);
-    }
-
-    .btn-upgrade-secondary:hover {
-      background: rgba(229, 184, 66, 0.2);
-    }
-
-    .btn-label-main {
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.11em;
-      text-transform: uppercase;
-    }
-
-    .btn-label-sub {
-      font-size: 0.68rem;
+    .btn-upgrade-solid {
+      background-color: #ffffff;
+      color: #000000;
+      border: 1px solid #ffffff;
       font-weight: 500;
-      letter-spacing: 0.06em;
-      opacity: 0.85;
-      margin-top: 2px;
+    }
+
+    .btn-upgrade-solid:hover {
+      background-color: #dcdcdc;
+      border-color: #dcdcdc;
+    }
+
+    .btn-upgrade-outline {
+      background-color: #000000;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      font-weight: 400;
+    }
+
+    .btn-upgrade-outline:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: #ffffff;
+    }
+
+    .btn-subtag {
+      font-size: 9.5px;
+      opacity: 0.65;
+      font-weight: 400;
+    }
+
+    .hero-photo-col {
+      width: 100%;
+    }
+
+    .hero-photo {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 919 / 695;
+      object-fit: cover;
+      background-color: #111111;
     }
 
     /* ============================================================
-       EXISTING HOURS, ADDRESS & FOLLOW US SECTION
+       EXACT LIVE 3-COLUMN FOOTER
     ============================================================ */
-    .info-section {
-      background: var(--bg-surface);
-      padding: 64px 20px;
-      border-bottom: 1px solid var(--border-hairline);
+    .site-footer {
+      margin-top: auto;
+      width: 100%;
+      padding: 64px 20px 104px;
     }
 
-    .info-grid {
+    .footer-grid {
       max-width: 980px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 36px;
+      gap: 28px;
+      align-items: start;
       text-align: center;
     }
 
-    .info-col h2 {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent-yellow);
-      margin-bottom: 16px;
+    .footer-text-block {
+      font-family: var(--font-sans);
+      font-size: 13.5px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--text-soft);
     }
 
-    .hours-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      font-size: 0.94rem;
-      color: var(--text-primary);
-      line-height: 1.5;
-    }
-
-    .address-block {
-      font-style: normal;
-      font-size: 0.96rem;
-      line-height: 1.7;
-      color: var(--text-primary);
-    }
-
-    .address-maps-link {
+    .footer-address-link {
       display: inline-block;
-      transition: color 0.2s ease;
+      transition: color 0.18s ease, text-decoration-color 0.18s ease;
     }
 
-    .address-maps-link:hover {
-      color: var(--accent-yellow);
+    body:not(.view-current) .footer-address-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
-    .upgrade-inline-phone {
-      margin-top: 12px;
-      transition: opacity 0.25s ease, max-height 0.25s ease;
-      max-height: 80px;
+    body.view-current .footer-address-link {
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .upgrade-footer-phone {
+      margin-top: 6px;
+      max-height: 44px;
+      opacity: 1;
       overflow: hidden;
+      transition: max-height 0.25s ease, opacity 0.22s ease, margin-top 0.25s ease;
     }
 
-    body.view-current .upgrade-inline-phone {
+    body.view-current .upgrade-footer-phone {
       max-height: 0;
       opacity: 0;
       margin-top: 0;
       pointer-events: none;
     }
 
-    .upgrade-inline-phone a {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--accent-yellow);
-      font-weight: 700;
-      font-size: 0.94rem;
-      border-bottom: 1px dashed rgba(229, 184, 66, 0.55);
-      padding-bottom: 2px;
+    .upgrade-footer-phone a {
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+      padding-bottom: 1px;
     }
 
-    /* Social Icons (Before vs. After Broken Wix Link Demo) */
-    .social-links {
+    .upgrade-footer-phone a:hover {
+      border-bottom-color: #ffffff;
+    }
+
+    .follow-col {
       display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .follow-heading {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-white);
+      margin-bottom: 12px;
+    }
+
+    .social-row {
+      display: flex;
+      align-items: center;
       justify-content: center;
       gap: 14px;
-      margin-top: 6px;
     }
 
-    .social-btn {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-elevated);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-primary);
-      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-    }
-
-    .social-btn:hover {
-      background: var(--accent-yellow);
-      color: #14120e;
-      border-color: var(--accent-yellow);
-    }
-
-    .social-status-tag {
+    .social-icon-link {
       display: inline-block;
-      margin-top: 12px;
-      font-size: 0.7rem;
-      letter-spacing: 0.04em;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-weight: 600;
+      width: 22px;
+      height: 22px;
+      transition: opacity 0.18s ease, transform 0.18s ease;
     }
 
-    .social-status-fixed {
-      background: rgba(52, 168, 83, 0.14);
-      color: #81c995;
-      border: 1px solid rgba(52, 168, 83, 0.35);
+    .social-icon-link:hover {
+      opacity: 0.72;
+      transform: translateY(-1px);
     }
 
-    .social-status-broken {
-      background: rgba(234, 67, 53, 0.14);
-      color: #f28b82;
-      border: 1px solid rgba(234, 67, 53, 0.35);
-      display: none;
+    .social-icon-link img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
     }
 
-    body.view-current .social-status-fixed {
-      display: none;
-    }
-
-    body.view-current .social-status-broken {
-      display: inline-block;
-    }
-
-    /* ============================================================
-       UPGRADE #3: QUICK CONTACT & MENU ACTION STRIP (HIDDEN IN BEFORE)
-    ============================================================ */
-    .upgrade-menu-footer {
-      background: #14120f;
-      border-bottom: 1px solid var(--border-hairline);
-      transition: max-height 0.32s ease, opacity 0.28s ease, padding 0.32s ease;
-      max-height: 220px;
-      opacity: 1;
-      overflow: hidden;
-    }
-
-    body.view-current .upgrade-menu-footer {
-      max-height: 0;
-      opacity: 0;
-      border-bottom-width: 0;
-      pointer-events: none;
-    }
-
-    .menu-footer-inner {
+    /* Bottom Copyright Line */
+    .footer-copyright {
       max-width: 980px;
-      margin: 0 auto;
-      padding: 22px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-    }
-
-    .menu-footer-copy {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
-
-    .menu-footer-copy strong {
-      color: var(--text-primary);
-    }
-
-    .menu-footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .mini-cta {
-      padding: 9px 16px;
-      border-radius: 4px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border: 1px solid var(--border-subtle);
-      color: var(--accent-yellow);
-      background: rgba(229, 184, 66, 0.08);
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .mini-cta:hover {
-      background: var(--accent-yellow);
-      color: #14120e;
-    }
-
-    /* ============================================================
-       SITE FOOTER (SHOWS LEFTOVER WIX COPYRIGHT IN BEFORE VIEW)
-    ============================================================ */
-    .site-footer {
-      margin-top: auto;
-      background: #0d0c0a;
-      padding: 28px 20px 104px;
+      margin: 76px auto 0;
       text-align: center;
-      font-size: 0.78rem;
-      color: #8f887a;
+      font-family: var(--font-sans);
+      font-size: 11.5px;
+      font-weight: 300;
+      color: #b8b8b8;
     }
 
-    .footer-upgraded-copy {
-      display: block;
+    .footer-copyright a {
+      text-decoration: underline;
     }
 
-    .footer-legacy-copy {
+    .copy-upgraded {
+      display: inline;
+    }
+
+    .copy-current {
       display: none;
     }
 
-    body.view-current .footer-upgraded-copy {
+    body.view-current .copy-upgraded {
       display: none;
     }
 
-    body.view-current .footer-legacy-copy {
-      display: block;
+    body.view-current .copy-current {
+      display: inline;
     }
 
     /* ============================================================
@@ -824,43 +672,75 @@
       bottom: 18px;
       transform: translateX(-50%);
       z-index: 9999;
-      background: rgba(16, 15, 13, 0.94);
+      background: rgba(14, 14, 14, 0.94);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(229, 184, 66, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.28);
       border-radius: 999px;
-      padding: 5px;
+      padding: 4px;
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7);
       max-width: calc(100vw - 24px);
     }
 
     .demo-toggle-btn {
       border: none;
       background: transparent;
-      color: var(--text-muted);
-      font-family: var(--font-sans);
-      font-size: 0.74rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      padding: 9px 15px;
+      color: #a6a6a6;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      padding: 8px 14px;
       border-radius: 999px;
       cursor: pointer;
       white-space: nowrap;
-      transition: background 0.2s ease, color 0.2s ease;
+      transition: background-color 0.18s ease, color 0.18s ease;
     }
 
     .demo-toggle-btn.is-active {
-      background: var(--accent-yellow);
-      color: #14120e;
+      background: #ffffff;
+      color: #000000;
     }
 
     /* ============================================================
-       MOBILE RESPONSIVE ADJUSTMENTS (390x844 TESTED)
+       RESPONSIVE MOBILE LAYOUT (390x844 OPTIMIZED)
     ============================================================ */
-    @media (max-width: 768px) {
+    @media (max-width: 820px) {
+      .utility-inner {
+        justify-content: center;
+        text-align: center;
+        padding: 8px 12px;
+        gap: 6px 12px;
+      }
+
+      .utility-group {
+        justify-content: center;
+        gap: 8px 12px;
+      }
+
+      .utility-hours {
+        font-size: 10px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .header-inner {
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        padding: 16px 20px;
+      }
+
+      .brand-logo-link {
+        width: 78px;
+        margin-left: 0;
+      }
+
+      .brand-logo-img {
+        width: 78px;
+      }
+
       .desktop-nav {
         display: none;
       }
@@ -869,52 +749,49 @@
         display: inline-flex;
       }
 
-      .utility-inner {
-        justify-content: center;
-        text-align: center;
-        padding: 8px 12px;
-        gap: 6px 12px;
-      }
-
-      .utility-hours {
-        font-size: 0.72rem;
-        width: 100%;
-        justify-content: center;
-      }
-
       .hero-section {
-        min-height: auto;
-        padding: 54px 18px 64px;
+        padding: 6px 20px 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .hero-copy-col {
+        padding: 10px 8px 4px;
+      }
+
+      .hero-tagline {
+        max-width: 280px;
+      }
+
+      .hero-age {
+        margin-bottom: 24px;
       }
 
       .btn-existing-menu,
-      .btn-upgrade-action {
+      .upgrade-hero-actions {
         width: 100%;
-        max-width: 310px;
+        max-width: 240px;
       }
 
-      .info-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .menu-footer-inner {
-        justify-content: center;
-        text-align: center;
-      }
-
-      .menu-footer-links {
-        justify-content: center;
-      }
-
-      /* Guarantee 88px+ bottom clearance so floating pill never overlaps footer content */
       .site-footer {
-        padding-bottom: 96px;
+        padding: 46px 20px 96px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-copyright {
+        margin-top: 44px;
       }
 
       .demo-toggle-btn {
-        font-size: 0.71rem;
-        padding: 9px 12px;
+        font-size: 10.5px;
+        padding: 8px 12px;
       }
     }
   </style>
@@ -922,55 +799,43 @@
 <body id="top">
   <div class="page-wrapper">
 
-    <!-- UPGRADE #1: Sticky Top Utility Bar -->
+    <!-- UPGRADE #1: Sticky Monochrome Utility Bar -->
     <div class="upgrade-utility-bar" aria-label="Quick Contact and Hours">
       <div class="utility-inner">
-        <a href="tel:+17654290405" class="utility-link utility-phone">
-          <svg class="utility-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span>(765) 429-0405</span>
-        </a>
-
-        <a href="https://www.google.com/maps/search/?api=1&query=223+Main+St+Lafayette+IN+47901" target="_blank" rel="noopener noreferrer" class="utility-link">
-          <svg class="utility-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>223 Main St, Lafayette, IN</span>
-        </a>
-
-        <span class="utility-item utility-hours">
-          <svg class="utility-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>Mon–Thu 11a–12a &bull; Fri 11a–1a &bull; Sat 4p–1a</span>
-        </span>
+        <div class="utility-group">
+          <a href="tel:+17654290405" class="utility-link utility-phone">
+            <svg class="u-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>(765) 429-0405</span>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=223+Main+St+Lafayette+IN+47901" target="_blank" rel="noopener noreferrer" class="utility-link">
+            <svg class="u-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>223 Main St, Lafayette, IN</span>
+          </a>
+        </div>
+        <span class="utility-hours">Mon–Thu 11a–12a &middot; Fri 11a–1a &middot; Sat 4p–1a</span>
       </div>
     </div>
 
-    <!-- EXISTING HEADER & NAVIGATION -->
+    <!-- EXACT LIVE HEADER -->
     <header class="site-header">
       <div class="header-inner">
         <a href="#top" class="brand-logo-link js-home-link" aria-label="The Black Sparrow Home">
-          <!-- Yellow Stamp Emblem representing BLASP-STAMP-YELLOW_edited_edited.png -->
-          <svg class="stamp-svg" viewBox="0 0 120 120" role="img" aria-label="The Black Sparrow Yellow Stamp">
-            <circle cx="60" cy="60" r="56" fill="none" stroke="#e5b842" stroke-width="3.2" stroke-dasharray="4 2"/>
-            <circle cx="60" cy="60" r="49" fill="rgba(229,184,66,0.08)" stroke="#e5b842" stroke-width="1.5"/>
-            <text x="60" y="34" text-anchor="middle" fill="#e5b842" font-family="Cinzel, Georgia, serif" font-size="9.5" font-weight="700" letter-spacing="2">THE BLACK</text>
-            <text x="60" y="65" text-anchor="middle" fill="#e5b842" font-family="Cinzel, Georgia, serif" font-size="17" font-weight="800" letter-spacing="1.8">SPARROW</text>
-            <line x1="28" y1="74" x2="92" y2="74" stroke="#e5b842" stroke-width="1.2"/>
-            <text x="60" y="89" text-anchor="middle" fill="#e5b842" font-family="Montserrat, sans-serif" font-size="7.5" font-weight="600" letter-spacing="1.6">LAFAYETTE &bull; IN</text>
-          </svg>
-          <div class="brand-wordmark">
-            <span>BLACK SPARROW</span>
-            <span>Main St &bull; Lafayette</span>
-          </div>
+          <img
+            src="https://static.wixstatic.com/media/dd8e6c_e87f5c4cd78748b88f345725ae9a821a~mv2.png/v1/fill/w_240,h_256,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/BLASP-STAMP-YELLOW_edited_edited.png"
+            alt="The Black Sparrow Logo"
+            class="brand-logo-img"
+          >
         </a>
 
         <nav class="desktop-nav" aria-label="Main Navigation">
-          <a href="#top" class="js-home-link">Home</a>
           <a href="https://www.blacksparrowpub.com/reservations" target="_blank" rel="noopener noreferrer">Reservations</a>
-          <a href="https://www.blacksparrowpub.com/menu" target="_blank" rel="noopener noreferrer">Order Online</a>
+          <a href="https://order.toasttab.com/online/the-black-sparrow-233-main-st?diningOption=takeout&rwg_token=ACgRB3dsV9zq7GHtJUSmfixVLL-s-IAID2QZOrEnRFtMNsO34i3BtVIm0OtIgUvXL-Qw8Ap-HFHGO4xRzztDm9lVYgkW5kJdnQ%3D%3D" target="_blank" rel="noopener noreferrer">Order Online</a>
           <a href="https://www.blacksparrowpub.com/about" target="_blank" rel="noopener noreferrer">About</a>
           <a href="https://www.blacksparrowpub.com/menu" target="_blank" rel="noopener noreferrer">Menu</a>
         </nav>
 
         <button class="hamburger-btn" id="openMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
             <line x1="3" y1="6" x2="21" y2="6"/>
             <line x1="3" y1="12" x2="21" y2="12"/>
             <line x1="3" y1="18" x2="21" y2="18"/>
@@ -979,144 +844,114 @@
       </div>
     </header>
 
-    <!-- MOBILE MENU BACKDROP & DRAWER -->
+    <!-- MOBILE MENU DRAWER -->
     <div class="mobile-backdrop" id="mobileBackdrop" aria-hidden="true"></div>
     <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
       <div class="drawer-top">
-        <span class="drawer-title">BLACK SPARROW</span>
+        <span class="drawer-label">The Black Sparrow</span>
         <button class="drawer-close" id="closeMenuBtn" aria-label="Close menu">&times;</button>
       </div>
       <a href="#top" class="mobile-nav-link js-home-link">Home</a>
       <a href="https://www.blacksparrowpub.com/reservations" target="_blank" rel="noopener noreferrer" class="mobile-nav-link js-drawer-link">Reservations</a>
-      <a href="https://www.blacksparrowpub.com/menu" target="_blank" rel="noopener noreferrer" class="mobile-nav-link js-drawer-link">Order Online</a>
+      <a href="https://order.toasttab.com/online/the-black-sparrow-233-main-st?diningOption=takeout&rwg_token=ACgRB3dsV9zq7GHtJUSmfixVLL-s-IAID2QZOrEnRFtMNsO34i3BtVIm0OtIgUvXL-Qw8Ap-HFHGO4xRzztDm9lVYgkW5kJdnQ%3D%3D" target="_blank" rel="noopener noreferrer" class="mobile-nav-link js-drawer-link">Order Online</a>
       <a href="https://www.blacksparrowpub.com/about" target="_blank" rel="noopener noreferrer" class="mobile-nav-link js-drawer-link">About</a>
       <a href="https://www.blacksparrowpub.com/menu" target="_blank" rel="noopener noreferrer" class="mobile-nav-link js-drawer-link">Menu</a>
 
-      <div class="drawer-contact-upgrade">
-        <a href="tel:+17654290405" class="drawer-call-btn js-drawer-link">Tap to Call (765) 429-0405</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=223+Main+St+Lafayette+IN+47901" target="_blank" rel="noopener noreferrer" style="font-size:0.78rem; color:#c2b9a7; text-align:center;" class="js-drawer-link">
-          Directions: 223 Main St, Lafayette, IN
-        </a>
+      <div class="drawer-upgrade-contact">
+        <a href="tel:+17654290405" class="drawer-call-btn js-drawer-link">Call (765) 429-0405</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=223+Main+St+Lafayette+IN+47901" target="_blank" rel="noopener noreferrer" class="drawer-map-link js-drawer-link">223 Main St, Lafayette, IN</a>
       </div>
     </aside>
 
-    <!-- MAIN CONTENT -->
-    <main>
-      <!-- HERO SECTION -->
-      <section class="hero-section">
-        <div class="hero-content">
-          <h1 class="hero-title">THE BLACK SPARROW</h1>
-          <div class="hero-divider" aria-hidden="true"></div>
+    <!-- EXACT LIVE HERO SECTION -->
+    <main class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-copy-col">
+          <h1 class="hero-title">THE BLACK<br>SPARROW</h1>
           <p class="hero-tagline">
             Providing Lafayette with honest food, good booze, and casual hospitality without making a big deal about it.
           </p>
-          <span class="hero-age-note">21+ Only</span>
+          <p class="hero-age">21+ Only</p>
 
-          <!-- Existing Site Button (Preserved) -->
-          <div class="existing-cta-wrap">
-            <a href="https://www.blacksparrowpub.com/menu" target="_blank" rel="noopener noreferrer" class="btn-existing-menu">
-              See our Menus
-            </a>
-          </div>
+          <!-- Original Button (Untouched) -->
+          <a href="https://www.blacksparrowpub.com/menu" target="_blank" rel="noopener noreferrer" class="btn-existing-menu">
+            See our Menus
+          </a>
 
-          <!-- UPGRADE #2: Above-the-Fold Action Buttons -->
-          <div class="upgrade-hero-actions" aria-label="Direct Ordering and Phone Actions">
-            <a href="https://www.blacksparrowpub.com/reservations" target="_blank" rel="noopener noreferrer" class="btn-upgrade-action btn-upgrade-primary">
-              <span class="btn-label-main">Reserve a Table</span>
-              <span class="btn-label-sub">Direct Online Booking</span>
+          <!-- UPGRADE #2: Direct Above-the-Fold Toast & Reservations Buttons -->
+          <div class="upgrade-hero-actions" aria-label="Direct Ordering and Reservations">
+            <a href="https://order.toasttab.com/online/the-black-sparrow-233-main-st?diningOption=takeout&rwg_token=ACgRB3dsV9zq7GHtJUSmfixVLL-s-IAID2QZOrEnRFtMNsO34i3BtVIm0OtIgUvXL-Qw8Ap-HFHGO4xRzztDm9lVYgkW5kJdnQ%3D%3D" target="_blank" rel="noopener noreferrer" class="btn-upgrade btn-upgrade-solid">
+              <span>Order Online</span>
+              <span class="btn-subtag">TOAST</span>
             </a>
-            <a href="tel:+17654290405" class="btn-upgrade-action btn-upgrade-secondary">
-              <span class="btn-label-main">Call (765) 429-0405</span>
-              <span class="btn-label-sub">One-Tap Phone Call</span>
+            <a href="https://www.blacksparrowpub.com/reservations" target="_blank" rel="noopener noreferrer" class="btn-upgrade btn-upgrade-outline">
+              <span>Reserve a Table</span>
             </a>
           </div>
         </div>
-      </section>
 
-      <!-- EXISTING HOURS, ADDRESS & SOCIAL SECTION -->
-      <section class="info-section" id="hours-location">
-        <div class="info-grid">
-          <div class="info-col">
-            <h2>Hours</h2>
-            <ul class="hours-list">
-              <li>Mon &ndash; Thu: 11am &ndash; 12am</li>
-              <li>Fri: 11am &ndash; 1am</li>
-              <li>Sat: 4pm &ndash; 1am</li>
-            </ul>
-          </div>
-
-          <div class="info-col">
-            <h2>Visit Us</h2>
-            <address class="address-block">
-              <a href="https://www.google.com/maps/search/?api=1&query=223+Main+St+Lafayette+IN+47901" target="_blank" rel="noopener noreferrer" class="address-maps-link">
-                223 Main St.<br>
-                Lafayette, IN 47901
-              </a>
-            </address>
-            <div class="upgrade-inline-phone">
-              <a href="tel:+17654290405">Call (765) 429-0405</a>
-            </div>
-          </div>
-
-          <div class="info-col">
-            <h2>Follow Us</h2>
-            <div class="social-links">
-              <a id="socialFacebook"
-                 href="https://www.facebook.com/TheBlackSparrowLafayette"
-                 data-fixed-href="https://www.facebook.com/TheBlackSparrowLafayette"
-                 data-broken-href="https://www.facebook.com/wix"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 class="social-btn"
-                 aria-label="Facebook">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                </svg>
-              </a>
-              <a id="socialInstagram"
-                 href="https://www.instagram.com/theblacksparrowlafayette/"
-                 data-fixed-href="https://www.instagram.com/theblacksparrowlafayette/"
-                 data-broken-href="https://www.instagram.com/wix/"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 class="social-btn"
-                 aria-label="Instagram">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                </svg>
-              </a>
-            </div>
-            <span class="social-status-tag social-status-fixed">Verified Black Sparrow Links</span>
-            <span class="social-status-tag social-status-broken">Current Live Site: Links to Wix.com</span>
-          </div>
+        <div class="hero-photo-col">
+          <img
+            src="https://static.wixstatic.com/media/dd8e6c_71384d66c91b49f3b11f649152e34026~mv2.jpg/v1/fill/w_919,h_695,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/dd8e6c_71384d66c91b49f3b11f649152e34026~mv2.jpg"
+            alt="The Black Sparrow interior brick archway and dining room in Lafayette, IN"
+            class="hero-photo"
+          >
         </div>
-      </section>
-
-      <!-- UPGRADE #3: MENU & CONTACT ACTION FOOTER -->
-      <section class="upgrade-menu-footer" aria-label="Quick Actions">
-        <div class="menu-footer-inner">
-          <p class="menu-footer-copy">
-            <strong>Stopping by Downtown Lafayette?</strong> Check tonight's menu, book a table, or call the bar directly.
-          </p>
-          <div class="menu-footer-links">
-            <a href="https://www.blacksparrowpub.com/menu" target="_blank" rel="noopener noreferrer" class="mini-cta">View Menu</a>
-            <a href="https://www.blacksparrowpub.com/reservations" target="_blank" rel="noopener noreferrer" class="mini-cta">Book Table</a>
-            <a href="tel:+17654290405" class="mini-cta">Call Bar</a>
-          </div>
-        </div>
-      </section>
+      </div>
     </main>
 
-    <!-- FOOTER (Toggles between live site's leftover Wix template credit vs. cleaned copyright) -->
+    <!-- EXACT LIVE 3-COLUMN FOOTER -->
     <footer class="site-footer">
-      <p class="footer-upgraded-copy">
-        &copy; 2026 The Black Sparrow Pub &bull; 223 Main St, Lafayette, IN 47901 &bull; (765) 429-0405
-      </p>
-      <p class="footer-legacy-copy">
-        &copy; 2035 by Melina. Powered and secured by Wix
-      </p>
+      <div class="footer-grid">
+        <div class="footer-text-block">
+          <p>Mon - Thu: 11am-12am</p>
+          <p>Fri: 11am - 1am</p>
+          <p>Sat: 4pm - 1am</p>
+        </div>
+
+        <div class="footer-text-block">
+          <a href="https://www.google.com/maps/search/?api=1&query=223+Main+St+Lafayette+IN+47901" target="_blank" rel="noopener noreferrer" class="footer-address-link" id="footerAddressLink">
+            223 Main St.<br>
+            Lafayette, IN 47901
+          </a>
+          <div class="upgrade-footer-phone">
+            <a href="tel:+17654290405">(765) 429-0405</a>
+          </div>
+        </div>
+
+        <div class="follow-col">
+          <p class="follow-heading">Follow Us</p>
+          <div class="social-row">
+            <a id="socialFacebook"
+               href="https://www.facebook.com/TheBlackSparrowLafayette"
+               data-fixed-href="https://www.facebook.com/TheBlackSparrowLafayette"
+               data-broken-href="https://www.facebook.com/wix"
+               title="The Black Sparrow on Facebook"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="social-icon-link"
+               aria-label="Facebook">
+              <img src="https://static.wixstatic.com/media/23fd2a2be53141ed810f4d3dcdcd01fa.png/v1/fill/w_42,h_42,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/23fd2a2be53141ed810f4d3dcdcd01fa.png" alt="Facebook">
+            </a>
+            <a id="socialInstagram"
+               href="https://www.instagram.com/theblacksparrowlafayette/"
+               data-fixed-href="https://www.instagram.com/theblacksparrowlafayette/"
+               data-broken-href="https://www.instagram.com/wix"
+               title="The Black Sparrow on Instagram"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="social-icon-link"
+               aria-label="Instagram">
+              <img src="https://static.wixstatic.com/media/81af6121f84c41a5b4391d7d37fce12a.png/v1/fill/w_42,h_42,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/81af6121f84c41a5b4391d7d37fce12a.png" alt="Instagram">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <span class="copy-upgraded">&copy; 2026 The Black Sparrow Pub &middot; 223 Main St, Lafayette, IN 47901</span>
+        <span class="copy-current">&copy; 2035 by Melina. Powered and secured by <a href="https://wix.com/?utm_campaign=vir_created_with" target="_blank" rel="noopener noreferrer">Wix</a></span>
+      </div>
     </footer>
   </div>
 
@@ -1153,11 +988,14 @@
         btnUpgraded.classList.toggle('is-active', !isCurrent);
         btnUpgraded.setAttribute('aria-pressed', String(!isCurrent));
 
-        // Toggle social hrefs between broken Wix template links and verified Black Sparrow links
-        [fbLink, igLink].forEach(function (link) {
-          if (!link) return;
-          link.href = isCurrent ? link.dataset.brokenHref : link.dataset.fixedHref;
-        });
+        if (fbLink) {
+          fbLink.href = isCurrent ? fbLink.dataset.brokenHref : fbLink.dataset.fixedHref;
+          fbLink.title = isCurrent ? 'Current Live Site: links to facebook.com/wix' : 'The Black Sparrow on Facebook';
+        }
+        if (igLink) {
+          igLink.href = isCurrent ? igLink.dataset.brokenHref : igLink.dataset.fixedHref;
+          igLink.title = isCurrent ? 'Current Live Site: links to instagram.com/wix' : 'The Black Sparrow on Instagram';
+        }
       }
 
       btnCurrent.addEventListener('click', function () {
@@ -1194,7 +1032,6 @@
         }
       });
 
-      // Home & logo links smoothly scroll to #top and close the mobile menu
       document.querySelectorAll('.js-home-link').forEach(function (link) {
         link.addEventListener('click', function (event) {
           event.preventDefault();
@@ -1203,7 +1040,6 @@
         });
       });
 
-      // Any mobile drawer link closes the drawer on click
       document.querySelectorAll('.js-drawer-link').forEach(function (link) {
         link.addEventListener('click', closeDrawer);
       });
